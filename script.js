@@ -46,11 +46,20 @@ function dividir() {
 //mostrar el resultado en el elemento id "resultado"
         document.getElementById("resultado").textContent = resultado;
 }
-function limpiar() {
-    // obtener los valores de los campos de entrada
 
-document.getElementById("number1").value = "";
-document.getElementById("number2").value = "";
-document.getElementById("simbolo").textContent = "+";
-document.getElementById("resultado").textContent = "0";
+
+function limpiar() {
+    // Limpiar los campos de entrada
+    document.getElementById("number1").value = "";
+    document.getElementById("number2").value = "";
+
+    // Limpiar el símbolo
+    document.getElementById("simbolo").textContent = "";
+
+    // Limpiar el resultado
+    document.getElementById("resultado").textContent = "";
 }
+
+document.getElementById("limpiar").addEventListener("click", limpiar);
+
+
